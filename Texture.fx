@@ -10,7 +10,7 @@
 Texture2D tex;
 sampler2D texture_sampler = sampler_state
 {
-	tex = <tex>;
+	Texture = <tex>;
 };
 struct VertexShaderInput
 {
