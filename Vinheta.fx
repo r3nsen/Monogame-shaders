@@ -23,7 +23,7 @@ float4 MainPS(VertexShaderOutput input) : COLOR
 {	
 	float2 uv = input.tex;
 	float pi = 3.141592653589793238462643383279;
-	float darkness = (sin((pi / 3) * (uv.x + 1.)) * sin((pi / 3) * (uv.y + 1.)));
+	float darkness = sin((pi / 3) * (uv.x + 1.)) * sin((pi / 3) * (uv.y + 1.));
 
 	float4 color = tex2D(texture_sampler,input.tex) * input.color * darkness;
 	return color;
