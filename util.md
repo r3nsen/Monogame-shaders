@@ -10,7 +10,7 @@ float2 mod(float2 x, float2 y)
 
 ## grid hexagonal
 
-```hls
+```hlsl
 float2 hexGrid(float2 uv)
 {
 	float2 r = float2(1., 1.73);
