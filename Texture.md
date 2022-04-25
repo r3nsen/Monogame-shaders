@@ -39,7 +39,7 @@ struct VertexShaderOutput
 ```hlsl
 VertexShaderOutput MainVS(in VertexShaderInput input)
 {
-	VertexShaderOutputT output = (VertexShaderOutputT)0;
+	VertexShaderOutputT output = (VertexShaderOutput)0;
   
 	output.position = mul(input.position, WorldViewProjection);
 	output.color = input.color;
@@ -101,7 +101,7 @@ struct VertexShaderOutput
 
 VertexShaderOutput MainVS(in VertexShaderInput input)
 {
-	VertexShaderOutputT output = (VertexShaderOutputT)0;
+	VertexShaderOutputT output = (VertexShaderOutput)0;
   
 	output.position = mul(input.position, WorldViewProjection);
 	output.color = input.color;
