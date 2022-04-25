@@ -1,7 +1,7 @@
 # Funções úteis
 
 ## Equivalente ao mod() do glsl
-```c
+```hlsl
 float2 mod(float2 x, float2 y)
 {
 	return x - y * floor(x/y);
@@ -10,7 +10,7 @@ float2 mod(float2 x, float2 y)
 
 ## grid hexagonal
 
-```c
+```hls
 float2 hexGrid(float2 uv)
 {
 	float2 r = float2(1., 1.73);
@@ -22,6 +22,6 @@ float2 hexGrid(float2 uv)
 }
 ```
 ### uso
-```c
+```hlsl
 hexGrid(uv * 5.);
 ```
