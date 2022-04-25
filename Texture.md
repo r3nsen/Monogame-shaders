@@ -18,6 +18,9 @@ sampler2D texture_sampler = sampler_state
 	Texture = <tex>;
 };
 ```
+
+## structs com propriedades
+```hlsl
 struct VertexShaderInput
 {
 	float4 position : POSITION0;
@@ -30,6 +33,8 @@ struct VertexShaderOutput
 	float4 color : COLOR0;
 	float2 tex: TEXCOORD0;
 };
+```
+
 ## vertex shader
 ```hlsl
 VertexShaderOutput MainVS(in VertexShaderInput input)
@@ -43,6 +48,7 @@ VertexShaderOutput MainVS(in VertexShaderInput input)
 	return output;
 }
 ```
+
 ## pixel shader / fragment shader
 ```hlsl
 float4 MainPS(VertexShaderOutput input) : COLOR
@@ -50,6 +56,7 @@ float4 MainPS(VertexShaderOutput input) : COLOR
 	return tex2D(texture_sampler, input.tex) * input.Color;
 }
 ```
+
 ## definir técnica e passos
 ```hlsl
 technique BasicColorDrawing
