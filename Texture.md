@@ -1,4 +1,4 @@
-## compila para opengl ou para directx
+## Diretivas de pré-processador - Compila para opengl ou para directx
 ```hlsl
 #if OPENGL
 	#define SV_POSITION POSITION
