@@ -1,4 +1,3 @@
-```hlsl
 #if OPENGL
 	#define SV_POSITION POSITION
 	#define VS_SHADERMODEL vs_3_0
@@ -37,4 +36,3 @@ technique BasicColorDrawing
 		PixelShader = compile PS_SHADERMODEL MainPS();
 	}
 };
-```
