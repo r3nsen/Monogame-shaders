@@ -19,7 +19,7 @@ sampler2D texture_sampler = sampler_state
 };
 ```
 
-## structs com propriedades
+## structs com atributos 
 ```hlsl
 struct VertexShaderInput
 {
