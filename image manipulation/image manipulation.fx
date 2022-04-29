@@ -72,9 +72,10 @@ float3 HSVtoRGB(float3 hsv)
 	float p = val * (1. - sat);
 	float q = val * (1. - f * sat);
 	float t = val * (1. - (1. - f) * sat);
-
+	
 	float3 rgb = 0;
-
+	
+	// val q p p t val
 	if (h == 0)
 	{
 		rgb.r = val;
