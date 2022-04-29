@@ -26,7 +26,7 @@ float3 RGBtoHSV(float3 rgb)
 	return float3(hue, sat, val);
 }
 ```
-#HSV to RGB
+# HSV to RGB
 ```hlsl
 float3 HSVtoRGB(float3 hsv)
 {
