@@ -1,10 +1,10 @@
 #if OPENGL
-	#define SV_POSITION POSITION
-	#define VS_SHADERMODEL vs_3_0
-	#define PS_SHADERMODEL ps_3_0
+#define SV_POSITION POSITION
+#define VS_SHADERMODEL vs_3_0
+#define PS_SHADERMODEL ps_3_0
 #else
-	#define VS_SHADERMODEL vs_4_0
-	#define PS_SHADERMODEL ps_4_0
+#define VS_SHADERMODEL vs_4_0
+#define PS_SHADERMODEL ps_4_0
 #endif
 
 Texture2D tex;
@@ -26,26 +26,28 @@ struct VertexShaderOutput
 	float2 tex: TEXCOORD0;
 };
 
+matrix WorldViewProjection;
+
 VertexShaderOutput MainVS(in VertexShaderInput input)
 {
-	VertexShaderOutputT output = (VertexShaderOutput)0;
-  
+	VertexShaderOutput output = (VertexShaderOutput)0;
+
 	output.position = mul(input.position, WorldViewProjection);
 	output.color = input.color;
 	output.tex = input.tex;
-  
+
 	return output;
 }
 
 float4 MainPS(VertexShaderOutput input) : COLOR
-{			
-	return tex2D(texture_sampler, input.tex) * input.Color;
+{
+	return tex2D(texture_sampler, input.tex) * input.color;
 }
 
 technique BasicColorDrawing
 {
 	pass P0
-	{		
+	{
 		VertexShader = compile VS_SHADERMODEL MainVS();
 		PixelShader = compile PS_SHADERMODEL MainPS();
 	}
